@@ -10,7 +10,7 @@ This project captures hand gesture images, processes them, trains a model, and p
 ### 1. Image Data Collection (`collect_data.py`)
 
 - Captures images from the webcam.
-- Saves 26 classes (A-Z) with 100 images each.
+- Saves classes with 100 images each.
 - Organizes images into class-specific folders in `./data`.
 
 ### 2. Dataset Creation (`create_dataset.py`)
@@ -19,13 +19,13 @@ This project captures hand gesture images, processes them, trains a model, and p
 - Extracts normalized hand landmark coordinates.
 - Saves feature vectors and labels to `data.pickle` for training.
 
-### 3. Model Training (`train_model.py`)
+### 3. Model Training (`main.py`)
 
 - Loads dataset from `data.pickle`.
 - Trains a Random Forest classifier to recognize gestures.
 - Evaluates accuracy and saves the model as `model.p`.
 
-### 4. Real-time Gesture Recognition (`run_model.py`)
+### 4. Real-time Gesture Recognition (`inference_classifier.py`)
 
 - Uses webcam feed to detect hand gestures live.
 - Applies the trained model to predict and display gestures on screen.
@@ -48,13 +48,9 @@ This project captures hand gesture images, processes them, trains a model, and p
 
 ---
 
-
----
-
 ## 📬 Contact
 
 Feel free to reach out if you have any questions or suggestions!
 
 ---
 
-**Happy Coding!** 🎉
